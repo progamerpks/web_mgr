@@ -1,0 +1,35 @@
+.App {
+  
+}
+
+
+
+.App-header {
+  background-color: #dbdbdb;
+  min-height: 100vh;
+  display: flex;
+
+}
+
+.Top-container{
+  background-color: #696969;
+  height: 40pt;
+  width: 2000pt;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.Top-container a{
+  color: white;
+  padding-left: 10pt;
+  padding-top: 10pt; 
+
+}
+
+.Top-sites{
+  padding-top: 60pt;
+  padding-left: 60pt;
+  size: 20pt;
+}
+
