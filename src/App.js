@@ -1,50 +1,79 @@
-import logo from './logo.svg';
 import './App.css';
-import rundrect from './RoundedRectangle.svg'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      
         <div className="Top-container">
         <a align="left" href="localhost:3000">
           Project_Name
         </a>
         </div>
+        
 
         <div className="Top-sites">
-      <img src={rundrect} className="Top-sites-box" alt="topsites" />
-      Top Sites
+         {AddTiteBtn("Top Sites",0.9)}   
+        </div>
 
-      </div>
+        <div className="Top-sites-content">
+          {AddTopSitesContentBoxes()}
+          
+        </div>
 
-
-      </header>
-
-      
-
-
-
-
-
-      {/*
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      */}
     </div>
   );
+}
+
+function AddTiteBtn(text, size) {
+  return(
+    <svg width={160*size} height={40*size}>
+          <g transform="translate(5,5)">
+            <rect id="Rounded_Rectangle_1" 
+            data-name="Rounded Rectangle 1" 
+            className="TitleBtn" 
+            width={150*size} height={30*size} 
+            rx={15*size} ry={15*size}/>
+          </g>    
+          <text id="TextElement" x={40*size} y={26*size} className="Top-sites-text"> 
+          {text}          
+          </text>
+        </svg>    
+  );
+}
+
+function AddTopSitesContentBoxes() {
+  var width = window.innerWidth
+  var parts = width/300
+  
+  console.log(width)
+  console.log(parts)
+
+    for (let index = 1; index < parts; index++) {
+      
+      AddContentBox("Sample "+index, 1)
+      console.log("sample "+index)
+    }
+}
+
+function AddContentBox(text,size) {
+  return(
+    <div>
+      <svg width={160*size} height={160*size}>
+          <g transform="translate(5,5)">
+            <rect id="Rounded_Rectangle_1" 
+            data-name={text} 
+            className="TitleContentBtn" 
+            width={150*size} height={150*size} 
+            rx={15*size} ry={15*size}/>
+          </g>    
+          <text id="TextElement" x={40*size} y={25*size} className="Top-sites-text"> 
+            {text}          
+          </text>
+      </svg>    
+    </div>
+  );
+  
 }
 
 export default App;

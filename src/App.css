@@ -1,21 +1,13 @@
-.App {
-  
-}
-
-
-
-.App-header {
+Body {
   background-color: #dbdbdb;
-  min-height: 100vh;
-  display: flex;
-
 }
+
 
 .Top-container{
   background-color: #696969;
   height: 40pt;
-  width: 2000pt;
-  overflow: hidden;
+  
+  overflow: auto;
   display: flex;
   flex-direction: row;
 }
@@ -28,8 +20,26 @@
 }
 
 .Top-sites{
-  padding-top: 60pt;
-  padding-left: 60pt;
+  padding-top: 20pt;
+  padding-left: 20pt;
   size: 20pt;
+  
 }
 
+.Top-sites-text {
+  color: #000;
+  font-size: 14pt;
+  font-style: bold;
+}
+
+.TitleBtn {
+  fill: #ebebeb;
+  stroke: #000;
+  stroke-width: 3px;
+}
+
+.TitleContentBtn {
+  fill: #ebebeb;
+  stroke: #000;
+  stroke-width: 3px;
+}
