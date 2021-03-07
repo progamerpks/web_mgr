@@ -18,6 +18,7 @@ function App() {
 
         <div className="Top-sites-content">
           {AddTopSitesContentBoxes()}
+          {AddContentBox("Sample", 1)}
           
         </div>
 
