@@ -1,29 +1,45 @@
 import './App.css';
 
+var screenWidthParts = 0
 
 function App() {
   return (
     <div className="App">
+
+      {intilization()}
       
-        <div className="Top-container">
-        <a align="left" href="localhost:3000">
-          Project_Name
-        </a>
-        </div>
+      <div className="Top-container">
+      <a align="left" href="localhost:3000">
+        Project_Name
+      </a>
+      </div>
         
 
-        <div className="Top-sites">
-         {AddTiteBtn("Top Sites",0.9)}   
-        </div>
+      <div className="Top-sites">
+        {AddTiteBtn("Top Sites",0.9)}   
+      </div>
 
-        <div className="Top-sites-content">
-          {AddTopSitesContentBoxes()}
-          {AddContentBox("Sample", 1)}
+      <div className="Top-sites-content" >
+        {AddTopSitesContentBoxes()}
+        
           
-        </div>
+          
+      </div>
 
     </div>
   );
+}
+
+function intilization() {
+  calculateScreenWidthParts()
+}
+
+function calculateScreenWidthParts() {
+  var width = window.innerWidth
+  screenWidthParts = parseInt(width/190) 
+
+  console.log(width)
+  console.log(screenWidthParts)
 }
 
 function AddTiteBtn(text, size) {
@@ -44,17 +60,15 @@ function AddTiteBtn(text, size) {
 }
 
 function AddTopSitesContentBoxes() {
-  var width = window.innerWidth
-  var parts = width/300
+    
+  var dabba = new Array(screenWidthParts);
   
-  console.log(width)
-  console.log(parts)
-
-    for (let index = 1; index < parts; index++) {
+    for (let index = 1; index <= screenWidthParts; index++) {
       
-      AddContentBox("Sample "+index, 1)
+      dabba[index] = AddContentBox("Sample "+index, 1)
       console.log("sample "+index)
     }
+    return dabba
 }
 
 function AddContentBox(text,size) {

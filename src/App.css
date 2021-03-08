@@ -21,7 +21,7 @@ Body {
 
 .Top-sites{
   padding-top: 20pt;
-  padding-left: 20pt;
+  padding-left: 10pt;
   size: 20pt;
   
 }
@@ -42,4 +42,11 @@ Body {
   fill: #ebebeb;
   stroke: #000;
   stroke-width: 3px;
+}
+
+.Top-sites-content{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto ;
+  padding: 0px;
+  
 }
