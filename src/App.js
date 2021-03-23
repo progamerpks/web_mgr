@@ -1,4 +1,5 @@
 import './App.css';
+import './GridWidth.css'
 
 var screenWidthParts = 0
 
@@ -8,22 +9,43 @@ function App() {
 
       {intilization()}
       
+      {/*Top Menu Bar*/}
       <div className="Top-container">
       <a align="left" href="localhost:3000">
         Project_Name
       </a>
       </div>
         
-
+      {/*Top Sites Heading*/}
       <div className="Top-sites">
-        {AddTiteBtn("Top Sites",0.9)}   
+        {AddTiteBtn("Top Sites",0.9,1)}   
       </div>
 
-      <div className="Top-sites-content" >
-        {AddTopSitesContentBoxes()}
-        
-          
-          
+      {/*Top Sites Contents*/}
+      <div className={"Grid-width-"+screenWidthParts} >
+        {AddTopSitesContentBoxes()} 
+      </div>
+
+      {/*All Categories Heading*/}
+      <div className="Top-sites">
+        {AddTiteBtn("All Categories",1,1.2)}   
+      </div>
+
+      {/*All Categories Contents*/}
+      <div className={"Grid-width-"+screenWidthParts} >
+        {AddTopSitesContentBoxes()} 
+      </div>
+
+      <div className={"Grid-width-"+screenWidthParts} >
+        {AddTopSitesContentBoxes()} 
+      </div>
+
+      <div className={"Grid-width-"+screenWidthParts} >
+        {AddTopSitesContentBoxes()} 
+      </div>
+
+      <div className={"Grid-width-"+screenWidthParts} >
+        {AddTopSitesContentBoxes()} 
       </div>
 
     </div>
@@ -32,24 +54,28 @@ function App() {
 
 function intilization() {
   calculateScreenWidthParts()
+  
+  
 }
+
+
 
 function calculateScreenWidthParts() {
   var width = window.innerWidth
-  screenWidthParts = parseInt(width/190) 
+  screenWidthParts = parseInt(width/160) 
 
   console.log(width)
   console.log(screenWidthParts)
 }
 
-function AddTiteBtn(text, size) {
+function AddTiteBtn(text, size, wide) {
   return(
-    <svg width={160*size} height={40*size}>
+    <svg width={160*size*wide} height={40*size}>
           <g transform="translate(5,5)">
             <rect id="Rounded_Rectangle_1" 
             data-name="Rounded Rectangle 1" 
             className="TitleBtn" 
-            width={150*size} height={30*size} 
+            width={150*size*wide} height={30*size} 
             rx={15*size} ry={15*size}/>
           </g>    
           <text id="TextElement" x={40*size} y={26*size} className="Top-sites-text"> 
@@ -65,7 +91,7 @@ function AddTopSitesContentBoxes() {
   
     for (let index = 1; index <= screenWidthParts; index++) {
       
-      dabba[index] = AddContentBox("Sample "+index, 1)
+      dabba[index] = AddContentBox("Sample "+index, 0.9)
       console.log("sample "+index)
     }
     return dabba
@@ -73,7 +99,7 @@ function AddTopSitesContentBoxes() {
 
 function AddContentBox(text,size) {
   return(
-    <div>
+    <div >
       <svg width={160*size} height={160*size}>
           <g transform="translate(5,5)">
             <rect id="Rounded_Rectangle_1" 
@@ -89,6 +115,14 @@ function AddContentBox(text,size) {
     </div>
   );
   
+}
+
+function AddButtonBox(text,size) {
+  return(
+    <div>
+
+    </div>
+  )
 }
 
 export default App;
