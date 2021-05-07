@@ -1,0 +1,23 @@
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="6in" height="1.236in">
+<defs>
+<filter filterUnits="userSpaceOnUse" id="Filter_0" x="0px" y="0px" width="425px" height="89px"  >
+    <feOffset in="SourceAlpha" dx="2.868" dy="4.096" />
+    <feGaussianBlur result="blurOut" stdDeviation="3.162" />
+    <feFlood flood-color="rgb(0, 0, 0)" result="floodOut" />
+    <feComposite operator="atop" in="floodOut" in2="blurOut" />
+    <feComponentTransfer><feFuncA type="linear" slope="1"/></feComponentTransfer>
+    <feMerge>
+    <feMergeNode/>
+    <feMergeNode in="SourceGraphic"/>
+  </feMerge>
+</filter>
+
+</defs>
+<g filter="url(#Filter_0)">
+<text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" font-size="66.667px" x="8px" y="62px"><tspan font-size="66.667px" font-family="AR CHRISTY" fill="#FFFFFF">WEB&#32;MANAGER</tspan></text>
+<text kerning="auto" font-family="Myriad Pro" stroke-width="2px" stroke="rgb(0, 0, 0)" fill-opacity="0" stroke-opacity="1" font-size="66.667px" x="8px" y="62px"><tspan font-size="66.667px" font-family="AR CHRISTY" fill="#FFFFFF">WEB&#32;MANAGER</tspan></text>
+</g>
+</svg>

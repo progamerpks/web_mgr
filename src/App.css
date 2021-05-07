@@ -3,21 +3,7 @@ Body {
 }
 
 
-.Top-container{
-  background-color: #696969;
-  height: 40pt;
-  
-  overflow: auto;
-  display: flex;
-  flex-direction: row;
-}
 
-.Top-container a{
-  color: white;
-  padding-left: 10pt;
-  padding-top: 10pt; 
-
-}
 
 .Top-sites{
   padding-top: 20pt;
@@ -43,5 +29,4 @@ Body {
   stroke: #000;
   stroke-width: 3px;
 }
-
 

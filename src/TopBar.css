@@ -1,0 +1,26 @@
+
+.Nav {    
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+  }
+  .Photu{
+   padding-top: 10px;
+   padding-left: 10px;
+  }
+
+  .Top-container{
+    background-color: #696969;
+    height: 40pt;
+    
+    overflow: auto;
+    display: flex;
+    flex-direction: row
+  }
+  
+  .Top-container a{
+    color: white;
+    padding-left: 10pt;
+    padding-top: 10pt; 
+  
+  }

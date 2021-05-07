@@ -1,128 +1,157 @@
-import './App.css';
+import React from 'react'
+//import ReactDOM from 'react-dom'
+//import {Route, Router, Link, Switch} from 'react-router-dom'
+//import Swal from 'sweetalert2'
+//import withReactContent from 'sweetalert2-react-content'
+import AddTiteBtn from './AddTiteBtn'
+import AddContentBoxes from './AddContentBoxes'
+import './App.css'
 import './GridWidth.css'
+//import categoryPage from './CategoryPage'
+import TopBar from './TopBar'
 
-var screenWidthParts = 0
+//const Swealrt = withReactContent(Swal)
 
-function App() {
-  return (
-    <div className="App">
 
-      {intilization()}
+class App extends React.Component{
+
+  constructor(){
+    super();
+    this.state = {
+      showButton: false,
+      showHomePage: true,
+      showTopSites: false,
+      showAllCategories: false,
+      showSpecificCategory: false,
+    };
+  }
+
+  render(){
+
+    const { 
+       
+      showHomePage,
+      showTopSites,
+      showAllCategories,
+      showSpecificCategory
+    } = this.state;
+
+    return (
+      <div className="App">
       
-      {/*Top Menu Bar*/}
-      <div className="Top-container">
-      <a align="left" href="localhost:3000">
-        Project_Name
-      </a>
-      </div>
+        {/*Top Menu Bar*/}
+        <TopBar/>
+
+        <br/><br/>
+
+        {/*Experimental Button*/}
+        <br/>
+        <div className="Experimental_Button" >
+          <button onClick={() => this.goHome()}>Home</button> 
+          <button onClick={() => this.goTopSites()}>Top Sites</button>
+          <button onClick={() => this.goAllCategories()}>All Categories</button> 
+          <button onClick={() => this.goSpecificCategory()}>Specific Category</button>
+
+        </div>
+
+
+        {/*Top Sites Heading*/}    
+        {showHomePage||showTopSites?    
+        <AddTiteBtn text="Top Sites" size='0.9' width='1' />
+        :null}
+
+        {/*Top Sites Contents*/}
+        {showHomePage?
+        <AddContentBoxes lines ='1'/>
+        :null}
+
+        {/*All Categories Heading*/}
+        {showHomePage||showAllCategories?
+        <AddTiteBtn text="All Categories" size='1' width='1.2' />
+        :null}
+
+        {/*Specific Category Heading*/}
+        {showSpecificCategory?
+        <AddTiteBtn text="Specific Category" size='1' width='1.2' />
+        :null}
+
+
+
+   
+
+        {/*All Categories Contents*/}
         
-      {/*Top Sites Heading*/}
-      <div className="Top-sites">
-        {AddTiteBtn("Top Sites",0.9,1)}   
+        <AddContentBoxes lines='10'/>   
+        
+        
       </div>
-
-      {/*Top Sites Contents*/}
-      <div className={"Grid-width-"+screenWidthParts} >
-        {AddTopSitesContentBoxes()} 
-      </div>
-
-      {/*All Categories Heading*/}
-      <div className="Top-sites">
-        {AddTiteBtn("All Categories",1,1.2)}   
-      </div>
-
-      {/*All Categories Contents*/}
-      <div className={"Grid-width-"+screenWidthParts} >
-        {AddTopSitesContentBoxes()} 
-      </div>
-
-      <div className={"Grid-width-"+screenWidthParts} >
-        {AddTopSitesContentBoxes()} 
-      </div>
-
-      <div className={"Grid-width-"+screenWidthParts} >
-        {AddTopSitesContentBoxes()} 
-      </div>
-
-      <div className={"Grid-width-"+screenWidthParts} >
-        {AddTopSitesContentBoxes()} 
-      </div>
-
-    </div>
-  );
-}
-
-function intilization() {
-  calculateScreenWidthParts()
-  
-  
-}
+    );
+  } //Render End
 
 
 
-function calculateScreenWidthParts() {
-  var width = window.innerWidth
-  screenWidthParts = parseInt(width/160) 
 
-  console.log(width)
-  console.log(screenWidthParts)
-}
 
-function AddTiteBtn(text, size, wide) {
-  return(
-    <svg width={160*size*wide} height={40*size}>
-          <g transform="translate(5,5)">
-            <rect id="Rounded_Rectangle_1" 
-            data-name="Rounded Rectangle 1" 
-            className="TitleBtn" 
-            width={150*size*wide} height={30*size} 
-            rx={15*size} ry={15*size}/>
-          </g>    
-          <text id="TextElement" x={40*size} y={26*size} className="Top-sites-text"> 
-          {text}          
-          </text>
-        </svg>    
-  );
-}
+  toggleButton = () => {
+    this.setState({showButton: !this.state.showButton});
+  };
 
-function AddTopSitesContentBoxes() {
-    
-  var dabba = new Array(screenWidthParts);
-  
-    for (let index = 1; index <= screenWidthParts; index++) {
-      
-      dabba[index] = AddContentBox("Sample "+index, 0.9)
-      console.log("sample "+index)
-    }
-    return dabba
-}
+  goHome = () => {
+    this.setState({
+      showHomePage: true,
+      showTopSites: false,
+      showAllCategories: false,
+      showSpecificCategory: false
+    });
+  }
 
-function AddContentBox(text,size) {
-  return(
-    <div >
-      <svg width={160*size} height={160*size}>
-          <g transform="translate(5,5)">
-            <rect id="Rounded_Rectangle_1" 
-            data-name={text} 
-            className="TitleContentBtn" 
-            width={150*size} height={150*size} 
-            rx={15*size} ry={15*size}/>
-          </g>    
-          <text id="TextElement" x={40*size} y={25*size} className="Top-sites-text"> 
-            {text}          
-          </text>
-      </svg>    
-    </div>
-  );
-  
-}
+  goTopSites = () => {
+    this.setState({
+      showHomePage: false,
+      showTopSites: true,
+      showAllCategories: false,
+      showSpecificCategory: false
+    });
+  }
 
-function AddButtonBox(text,size) {
-  return(
-    <div>
+  goAllCategories = () => {
+    this.setState({
+      showHomePage: false,
+      showTopSites: false,
+      showAllCategories: true,
+      showSpecificCategory: false
+    });
+  }
 
-    </div>
-  )
-}
+  goSpecificCategory = () => {
+    this.setState({
+      showHomePage: false,
+      showTopSites: false,
+      showAllCategories: false,
+      showSpecificCategory: true
+    });
+  }
+
+} //Class End
+
+
+
+/*
+Swealrt.fire({
+  title: <p>Hello World</p>,
+  footer: 'Copyright 2021',
+  didOpen: () => {
+    Swealrt.clickConfirm()
+  }
+}).then(() => {
+  return Swealrt.fire(<p>Shorthand works too</p>)
+})
+
+*/
+
+
+
+
+
 
 export default App;
