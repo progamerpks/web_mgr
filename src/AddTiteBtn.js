@@ -28,7 +28,7 @@ import React from 'react'
         {
             return(
             <div className='Top-sites'>
-            <svg width={160*this.size*this.wide} height={40*this.size}>
+            <svg id="Title_Box" width={160*this.size*this.wide} height={40*this.size}>
                 <g transform="translate(5,5)">
                     <rect id="Rounded_Rectangle_1" 
                     data-name="Rounded Rectangle 1" 

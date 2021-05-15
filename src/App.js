@@ -5,18 +5,26 @@ import React from 'react'
 //import withReactContent from 'sweetalert2-react-content'
 import AddTiteBtn from './AddTiteBtn'
 import AddContentBoxes from './AddContentBoxes'
+import TopBar from './TopBar'
+import AddCntntBxFunc from './AddCntntBxFunc'
 import './App.css'
 import './GridWidth.css'
-//import categoryPage from './CategoryPage'
-import TopBar from './TopBar'
 
+import {setCookie,getCookie} from './Content/CookiesFunc'
+//import {ShowOnScreen} from '../public/ShowState'
+
+var ShowOnScreen = "Home";
+document.cookie = "ShowScreen=Gome;"
+//console.log(document.cookie)
 //const Swealrt = withReactContent(Swal)
-
+//window.document.createElement(ShowOnScreen,value=Home);
 
 class App extends React.Component{
 
   constructor(){
     super();
+
+    
     this.state = {
       showButton: false,
       showHomePage: true,
@@ -25,7 +33,8 @@ class App extends React.Component{
       showSpecificCategory: false,
     };
   }
-
+  
+    
   render(){
 
     const { 
@@ -35,6 +44,9 @@ class App extends React.Component{
       showAllCategories,
       showSpecificCategory
     } = this.state;
+
+    
+    
 
     return (
       <div className="App">
@@ -46,7 +58,7 @@ class App extends React.Component{
 
         {/*Experimental Button*/}
         <br/>
-        <div className="Experimental_Button" >
+        <div className={showSpecificCategory?"Experimental_Button_On":"Experimental_Button"} >
           <button onClick={() => this.goHome()}>Home</button> 
           <button onClick={() => this.goTopSites()}>Top Sites</button>
           <button onClick={() => this.goAllCategories()}>All Categories</button> 
@@ -56,9 +68,11 @@ class App extends React.Component{
 
 
         {/*Top Sites Heading*/}    
-        {showHomePage||showTopSites?    
-        <AddTiteBtn text="Top Sites" size='0.9' width='1' />
-        :null}
+          {showHomePage||showTopSites?   
+            <div onClick={() => this.goTopSites()} >
+              <AddTiteBtn text="Top Sites" size='0.9' width='1' />
+            </div>
+          :null}
 
         {/*Top Sites Contents*/}
         {showHomePage?
@@ -66,9 +80,13 @@ class App extends React.Component{
         :null}
 
         {/*All Categories Heading*/}
-        {showHomePage||showAllCategories?
-        <AddTiteBtn text="All Categories" size='1' width='1.2' />
-        :null}
+          <div onClick={() => this.goAllCategories()} >
+            {showHomePage||showAllCategories?
+              <AddTiteBtn text="All Categories" size='1' width='1.2' />
+            :null}
+          </div>
+
+                
 
         {/*Specific Category Heading*/}
         {showSpecificCategory?
@@ -80,9 +98,13 @@ class App extends React.Component{
    
 
         {/*All Categories Contents*/}
-        
-        <AddContentBoxes lines='10'/>   
-        
+        {/*
+        <AddContentBoxes lines='2' />   
+        */}
+
+        {ShowOnScreen==="Home"||ShowOnScreen==="AllCategories"?
+        <AddCntntBxFunc show="AllCategories"/>
+        :null}
         
       </div>
     );
@@ -103,6 +125,9 @@ class App extends React.Component{
       showAllCategories: false,
       showSpecificCategory: false
     });
+    ShowOnScreen="Home";
+    //setCookie("ShowScreen","Home");
+    console.log(getCookie("ShowScreen"));
   }
 
   goTopSites = () => {
@@ -112,6 +137,7 @@ class App extends React.Component{
       showAllCategories: false,
       showSpecificCategory: false
     });
+    ShowOnScreen="TopSites";
   }
 
   goAllCategories = () => {
@@ -121,6 +147,7 @@ class App extends React.Component{
       showAllCategories: true,
       showSpecificCategory: false
     });
+    ShowOnScreen="AllCategories";
   }
 
   goSpecificCategory = () => {
@@ -129,8 +156,11 @@ class App extends React.Component{
       showTopSites: false,
       showAllCategories: false,
       showSpecificCategory: true
-    });
+    });   
+    ShowOnScreen="SpecificCategory"; 
   }
+  
+  doNothing = () => {}
 
 } //Class End
 

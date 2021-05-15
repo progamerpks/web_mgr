@@ -10,6 +10,13 @@ Body {
   padding-left: 10pt;
   size: 20pt;
   
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
 }
 
 .Top-sites-text {
@@ -21,12 +28,98 @@ Body {
 .TitleBtn {
   fill: #ebebeb;
   stroke: #000;
-  stroke-width: 3px;
+  stroke-width: 1px;
+  
 }
 
 .TitleContentBtn {
   fill: #ebebeb;
   stroke: #000;
-  stroke-width: 3px;
+  stroke-width: 1px;
+  
+  
 }
 
+.BlankContentBtn{
+  fill: #00000000;
+  stroke: rgba(0, 0, 0, 0);
+  stroke-width: 1px;
+  
+}
+
+.Blank_Content_Box {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+
+
+.Title_Box{
+  transition: width 0.5s;
+  transition: height 0.5s;
+  
+}
+
+.AllBoxes{
+  padding-left: 1%;
+  padding-right: 1%;
+
+  
+  
+  
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.Experimental_Button_On{
+  position: fixed;
+}
+
+.Content_Boxes_Frame {
+  position: relative;
+}
+
+.Blank_Content_Boxes_Frame {
+  position: relative;
+  
+}
+
+.Content_Box {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  
+  transition: width 1s;
+  transition: height 1s;
+}
+
+
+.Content_Box_Image {
+  position: absolute;
+  
+  left: 15pt;
+  z-index: 2;
+  
+}
+.Content_Boxes_Text {
+  z-index: 2;
+  top: 80pt;
+  left: 0pt;
+  
+  
+  position: relative;
+  
+}
+
+.Whole_Content_Frame{
+  width: 95%; margin: 10px auto; 
+  
+}

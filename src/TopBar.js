@@ -1,9 +1,21 @@
 import React from 'react'
 import './TopBar.css'
 import logoName from './LogoName.svg'
+import searchIcon from './search-solid.svg'
+import {CategoriesNameImage} from './Data/Categories'
+
 
 class TopBar extends React.Component 
 {
+  
+  constructor()
+  {
+    super();
+    var a;
+    
+  }
+  
+  /*
     listener = null;
     
     state = {
@@ -33,17 +45,33 @@ class TopBar extends React.Component
    }
 
    doNothing = () => {}
-
+*/
   render()
   {
+    
+    
     return(
-        <div>
+      
+      <div>
+          {/*
         <div className={`Nav ${this.state.nav }`}>
-        <div className="Top-container">
-          <img className='Photu' src={logoName} alt='Web Manager' align="left" href="localhost:3000"/>
+        */}
+          <div className={`Nav`}>
+            <div className="Top-container">
+              <img className='Photu' src={logoName} alt='Web Manager' align="left" href="localhost:3000" />
           
-        </div>
-        </div>
+              <div className="search-box" >
+                <form>
+                  <input type="text" placeholder="Search..." name="search"
+                  className="search-input"/>
+
+                  <button className="search-button" type="submit">
+                    <img id="search-button-img" src={searchIcon} alt="Search" height="20px" width="20px"/>  
+                  </button>          
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
     );
   }

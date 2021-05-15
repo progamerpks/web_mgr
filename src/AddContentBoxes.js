@@ -1,16 +1,22 @@
 import React from 'react'
+//import DBF from './DBfunctions'
+//import CategoriesData from './Data/Categories'
 
 class AddContentBoxes extends React.Component
+
 {
     
 
     constructor(props)
     {
-        super();
-        this.screenWidthParts = 0;
-        this.calculateScreenWidthParts();
-        this.lines = props.lines;
-        
+      super();
+      this.screenWidthParts = 0;
+      this.calculateScreenWidthParts();
+      this.lines = props.lines;
+      
+
+      
+      
     }
 
     render()
@@ -18,6 +24,7 @@ class AddContentBoxes extends React.Component
         return(
             <div className='AllBoxes'>
             {this.AddMultipleLineOfBoxes()}
+            
             </div>
         )
     }
@@ -52,16 +59,16 @@ class AddContentBoxes extends React.Component
 
     AddContentBox(text,size) {
         return(
-          <div >
-            <svg width={160*size} height={160*size}>
+          <div>
+            <svg id="Content_Boxes_Frame" width={160*size} height={160*size}>
                 <g transform="translate(5,5)">
-                  <rect id="Rounded_Rectangle_1" 
+                  <rect id="Content_Boxes" 
                   data-name={text} 
                   className="TitleContentBtn" 
                   width={150*size} height={150*size} 
                   rx={15*size} ry={15*size}/>
                 </g>    
-                <text id="TextElement" x={40*size} y={25*size} className="Top-sites-text"> 
+                <text id="Content_Boxes_Text" x={40*size} y={25*size} className="Top-sites-text"> 
                   {text}          
                 </text>
             </svg>    
