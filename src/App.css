@@ -105,7 +105,8 @@ Body {
 .Content_Box_Image {
   position: absolute;
   
-  left: 15pt;
+  left: 22pt;
+  top: 7pt;
   z-index: 2;
   
 }

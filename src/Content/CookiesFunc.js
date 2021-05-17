@@ -1,18 +1,4 @@
 
-/*
-function set()
-    {
-        console.log("SET")
-    }
-
-    function get()
-    {
-        console.log("GET")
-    }
-
-*/
-
-
 function setCookie(cname, cvalue) 
 {  
     document.cookie = cname + "=" + cvalue + ";";
@@ -39,9 +25,5 @@ function getCookie(cname)
         return "";
 }
   
-
-
-
-
 
 export {setCookie,getCookie}

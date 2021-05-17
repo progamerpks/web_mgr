@@ -1,5 +1,7 @@
 
 import React from 'react'
+import {setCookie,getCookie} from '../Content/CookiesFunc'
+
 
 class BoxFunc extends React.Component{
 
@@ -9,9 +11,17 @@ class BoxFunc extends React.Component{
         this.text = props.text;
         this.size = props.size;
         this.img = props.img;
-        
+        this.state = {changeState: true};
     }
 
+    do()
+    {
+        setCookie("ShowOnScreen",this.text);
+        this.setState({changeState: true });
+        console.log(getCookie("ShowOnScreen"));
+    }
+
+    //{this.dol()}
 
     render()
     {
@@ -19,7 +29,15 @@ class BoxFunc extends React.Component{
         return(
         <div className="Content_Boxes_Frame">
             
-            <img className="Content_Box_Image" src={this.img} alt="icon"  height={120*this.size} width={120*this.size} />
+            <img className="Content_Box_Image" 
+            src={this.img} 
+            alt="icon"  
+            height={100*this.size} 
+            width={100*this.size} 
+            onClick={() => this.do()}
+            
+            
+            />
             
             
             <svg className="Content_Box"   width={160*this.size} height={160*this.size}>

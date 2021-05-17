@@ -3,33 +3,61 @@
  
  var CategoriesNameImage =
  [
+	[
+        "Agriculture",
+        "../Image/Category/default.png"
+    ],
+	[
+        "Anime",
+        "../Image/Category/default.png"
+    ],
     [
         "Bank",
-        "../Image/Category/default.png"
+        "../Image/Sites/sbi.png"
     ],
     [
         "Blog",
         "../Image/Category/default.png"
     ],
-    [
-        "Cloud",
+	[
+        "Books",
         "../Image/Category/default.png"
     ],
     [
+        "Cloud",
+        "../Image/Sites/onedrive.png"
+    ],
+    [
         "Community",
+        "../Image/Sites/discord.png"
+    ],
+	[
+        "Cooking",
         "../Image/Category/default.png"
     ],
     [
         "Developer",
         "../Image/Category/default.png"
     ],
-    [
-        "Information",
+	[
+        "Entertainment",
         "../Image/Category/default.png"
     ],
-    [
-        "Goverment",
+	[
+        "Finance",
         "../Image/Category/default.png"
+    ],
+	[
+        "Government",
+        "../Image/Category/government.png"
+    ],
+    [
+        "Information",
+        "../Image/Sites/wikipedia.png"
+    ],
+    [
+        "Jobs",
+        "../Image/Sites/linkedin.png"
     ],
     [
         "Mail",
@@ -37,47 +65,38 @@
     ],
     [
         "Maps",
-        "../Image/Category/default.png"
+        "../Image/Sites/google_maps.png"
     ],
     [
         "News",
-        "../Image/Category/default.png"
+        "../Image/Sites/zee-news.png"
     ],
     [
         "Shopping",
-        "../Image/Category/default.png"
+        "../Image/Sites/amazon.png"
     ],
-    [
-        "OTT",
-        "../Image/Category/default.png"
-    ],
-    [
-        "Payment",
-        "../Image/Category/default.png"
-    ],
+    
+    
     [
         "Reviews",
         "../Image/Category/default.png"
     ],
     [
         "Search Engine",
-        "../Image/Category/default.png"
+        "../Image/Sites/google.png"
     ],
     [
         "Social Media",
-        "../Image/Category/default.png"
+        "../Image/Sites/fb.png"
     ],
     [
         "Space",
         "../Image/Category/default.png"
     ],
-    [
-        "Streaming",
-        "../Image/Category/default.png"
-    ],
+   
     [
         "Study",
-        "../Image/Category/default.png"
+        "../Image/Sites/cbse.png"
     ],
     [
         "Travel",
@@ -86,3 +105,18 @@
 ] 
 
 export {CategoriesNameImage}
+
+/*
+[
+        "OTT",
+        "../Image/Sites/netflix.png"
+    ],
+[
+        "Payment",
+        "../Image/Sites/paytm.png"
+    ],
+ [
+        "Streaming",
+        "../Image/Category/default.png"
+    ],
+*/

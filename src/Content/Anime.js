@@ -1,18 +1,19 @@
+
 import React from 'react'
 import BoxFunc from './BoxFunc';
 import BlankBoxFunc from './BlankBoxFunc';
-import {CategoriesNameImage} from '../Data/Categories'
+import {data} from '../Data/Anime'
 
 
 var remainingBoxes;
 let addedBoxes;
 
-class AllCategories extends React.Component
+class Anime extends React.Component
 {
     constructor()
     {
         super();
-        remainingBoxes = CategoriesNameImage.length;
+        remainingBoxes = data.length;
         addedBoxes = parseInt(0);
         this.screenWidthParts = parseInt(window.innerWidth/160);
 
@@ -45,8 +46,8 @@ class AllCategories extends React.Component
             if(remainingBoxes>=0)
             {
                 dabba[index]= <BoxFunc 
-                                text={CategoriesNameImage[addedBoxes][0]} 
-                                img={CategoriesNameImage[addedBoxes][1]}
+                                text={data[addedBoxes][1]} 
+                                img={data[addedBoxes][3]}
                                 size="0.9"/>            
             }else{
                 dabba[index]= <BlankBoxFunc size="0.9"/>
@@ -73,4 +74,4 @@ class AllCategories extends React.Component
     }   
 }
 
-export default AllCategories
+export default Anime

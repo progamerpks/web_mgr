@@ -1,0 +1,35 @@
+var data = 
+[
+["1",   "nonghyup",	"nonghyup.com",  	"",   		"00:08:22",   	"7.86",	"18.73%"],
+["2",   "Rural King",	"ruralking.com" ,  	"",   		"00:03:17",	"3.49",	"47.24%"],
+["3",   "Zgny",	    "zgny.com.cn",  	"",   		"00:00:09",	"3.00",	"6.42%"],
+["4",   "Embrapa" ,	"embrapa.br" ,  	"",   		"00:03:11",	"2.88",	"68.30%"],
+["5",   "Wur",	"wur.nl" ,  	"",   	"00:06:41"	,"4.98",	"35.42%"],
+["6",   "Landand Farm" ,  "landandfarm.com" ,	  	"",   	"00:06:01",	"5.23",	"47.40%"],
+["7",	"Agroinform" , 	"agroinform.hu" ,  	"",   		"00:06:37",	"4.10",	"55.23%"],
+["8",   "Landwirt",  "landwirt.com",  	"",   		"00:05:58",	"8.51",	"45.07%"],
+["9",	"Monrovia",	"monrovia.com",  	"",   		"00:03:43",	"4.70",	"69.32%"],
+["10",  "Mfrural" ,	"mfrural.com.br" ,  	"",   		"00:03:00",	"2.82",	"59.27%"],
+["11",	"Proven Winners",	"provenwinners.com",  	"",   		"00:03:32",	"3.58",	"59.38%"],
+["12",	"Xsion Service" ,	"xsion-service.com" ,  	"",   		"00:02:04",	"2.72",	"18.26%"],
+["13",	"Landi" ,	"landi.ch" ,  	"",   		"00:02:36",	"3.66",	"49.66%"],
+["14",	"Tractor Data",	"tractordata.com",  	"",   	 	"00:02:46",	"3.64",	"51.27%"],
+["15",	"Tractorbynet",	"tractorbynet.com",   	"",   		"00:03:29",	"2.66",	"66.29%"],
+["16",  "Agro Server",  "agroserver.ru",  	"",   	 "00:03:40","3.64"	,"48.85%"],
+["17",	"Toro",	"toro.com",   	"",   		"00:03:10",	"3.29",	"52.57%"],
+["18",	"Machinio",	"machinio.com",  	"",   	"00:03:11"	,"4.67","43.28%"],
+["19",	"Farmer",	"farmer.pl",   	"",   		"00:01:58",	"2.22",	"60.39%"],
+["20",	"Sakata Tsushin",	"sakata-tsushin.com",   	"",   	 "00:01:51",	"1.67",	"74.10%"],
+["21",	"Agrarheute" ,	"agrarheute.com" ,  	"",   		"00:01:02",	"1.65",	"77.32%"],
+["22",	"Agrofy" ,	"agrofy.com.ar" ,  	"",   		"00:02:41",	"2.42",	"62.92%"],
+["23",	"Proplanta" 	,	"proplanta.de" 	,  	"",   	"00:01:38",	"2.69",	"52.50%"],
+["24",	"Pleincham" ,	"pleinchamp.com" ,  	"",   		"00:01:44",	"2.87",	"37.86%"],
+["25",	"Terre Net" 	,	"terre-net.fr" 	,  	"",   	"00:01:47"	,"2.06",	"61.94%"],
+["26",	"Equipment Trader" ,	"equipmenttrader.com" ,  	"",   		"00:02:30",	"2.51",	"62.08%"],
+["27",	"Kreis Borken",	"kreis-borken.de",   	"",   		"00:02:26",	"3.22",	"59.94%"],
+["28",	"Lawnsite",	"lawnsite.com",   	"",   		"00:02:40",	"2.82",	"72.55%"],
+["29",	"Traktorpool",	"traktorpool.de",  	"",   		"00:06:06",	"7.29",	"37.72%"],
+["30",	"Inta" ,	"inta.gob.ar" ,  	"",   		"00:05:12",	"3.61",	"61.37%"]
+]
+
+export {data}
