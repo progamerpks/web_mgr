@@ -47,6 +47,7 @@ class Developer extends React.Component
             {
                 dabba[index]= <BoxFunc 
                                 text={data[addedBoxes][0]} 
+                                domain={data[addedBoxes][1]}
                                 img={data[addedBoxes][2]}
                                 size="0.9"/>            
             }else{
