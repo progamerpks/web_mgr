@@ -34,6 +34,7 @@ class HomeTopSites extends React.Component
             
                 dabba[index]= <BoxFunc 
                                 text={data[index][1]} 
+                                domain={data[index][2]} 
                                 img={data[index][3]}
                                 size="0.9"/>            
             

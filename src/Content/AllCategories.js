@@ -46,6 +46,7 @@ class AllCategories extends React.Component
             {
                 dabba[index]= <BoxFunc 
                                 text={CategoriesNameImage[addedBoxes][0]} 
+                                domain="" 
                                 img={CategoriesNameImage[addedBoxes][1]}
                                 size="0.9"/>            
             }else{

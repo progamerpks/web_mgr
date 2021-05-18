@@ -10,7 +10,17 @@ import Entertainment from './Content/Entertainment';
 import Finance from './Content/Finance';
 import Jobs from './Content/Jobs';
 import Shopping from './Content/Shopping';
-
+import Blog from './Content/Blog';
+import Cloud from './Content/Cloud';
+import SocialMedia from './Content/SocialMedia';
+import Emails from './Content/Emails';
+import Space from './Content/Space';
+import Government from './Content/Government';
+import Developer from './Content/Developer';
+import Maps from './Content/Maps';
+import SearchEngine from './Content/SearchEngine';
+import Travel from './Content/Travel';
+import Bank from './Content/Bank';
 
 
 var wapas;
@@ -89,8 +99,61 @@ class AddCntntBxFunc extends React.Component
                 wapas = <Shopping />
                 console.log("Shopping")
                 break;
-                                      
 
+            case "Blog":
+                wapas = <Blog />
+                console.log("Blog")
+                break;
+                                      
+                case "Cloud":
+                    wapas = <Cloud />
+                    console.log("Cloud")
+                    break;
+
+                    case "Social Media":
+                    wapas = <SocialMedia />
+                    console.log("SocialMedia")
+                    break;
+
+                    case "Emails":
+                    wapas = <Emails />
+                    console.log("Emails")
+                    break;
+
+                    case "Space":
+                    wapas = <Space />
+                    console.log("Space")
+                    break;
+
+                    case "Government":
+                    wapas = <Government />
+                    console.log("Government")
+                    break;
+
+                    case "Developer":
+                    wapas = <Developer />
+                    console.log("Developer")
+                    break;
+
+                    case "Maps":
+                    wapas = <Maps />
+                    console.log("Maps")
+                    break;
+
+                    case "Search Engine":
+                    wapas = <SearchEngine />
+                    console.log("SearchEngine")
+                    break;
+
+                    case "Travel":
+                    wapas = <Travel />
+                    console.log("Travel")
+                    break;
+
+                    case "Bank":
+                    wapas = <Bank />
+                    console.log("Bank")
+                    break;
 
             default:
                 break;

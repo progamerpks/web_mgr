@@ -12,13 +12,20 @@ class BoxFunc extends React.Component{
         this.size = props.size;
         this.img = props.img;
         this.state = {changeState: true};
+        this.domain = props.domain;
     }
 
     do()
     {
+        if(this.domain==="")
+        {
         setCookie("ShowOnScreen",this.text);
         this.setState({changeState: true });
         console.log(getCookie("ShowOnScreen"));
+        }else
+        {
+            window.location.href = "https://"+this.domain;
+        }
     }
 
     //{this.dol()}

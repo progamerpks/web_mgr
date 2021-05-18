@@ -5,11 +5,11 @@
  [
 	[
         "Agriculture",
-        "../Image/Category/default.png"
+        "../Image/Category/agriculture.png"
     ],
 	[
         "Anime",
-        "../Image/Category/default.png"
+        "../Image/Sites/crunchyroll.png"
     ],
     [
         "Bank",
@@ -17,35 +17,32 @@
     ],
     [
         "Blog",
-        "../Image/Category/default.png"
+        "../Image/Category/blog.png"
     ],
 	[
         "Books",
-        "../Image/Category/default.png"
+        "../Image/Category/books.png"
     ],
     [
         "Cloud",
         "../Image/Sites/onedrive.png"
     ],
-    [
-        "Community",
-        "../Image/Sites/discord.png"
-    ],
+    
 	[
         "Cooking",
-        "../Image/Category/default.png"
+        "../Image/Category/cooking.png"
     ],
     [
         "Developer",
-        "../Image/Category/default.png"
+        "../Image/Category/developer.png"
     ],
 	[
         "Entertainment",
-        "../Image/Category/default.png"
+        "../Image/Sites/netflix.png"
     ],
 	[
         "Finance",
-        "../Image/Category/default.png"
+        "../Image/Category/finance.png"
     ],
 	[
         "Government",
@@ -60,8 +57,8 @@
         "../Image/Sites/linkedin.png"
     ],
     [
-        "Mail",
-        "../Image/Category/default.png"
+        "Emails",
+        "../Image/Sites/gmail.png"
     ],
     [
         "Maps",
@@ -69,7 +66,7 @@
     ],
     [
         "News",
-        "../Image/Sites/zee-news.png"
+        "../Image/Sites/cnn.png"
     ],
     [
         "Shopping",
@@ -77,10 +74,7 @@
     ],
     
     
-    [
-        "Reviews",
-        "../Image/Category/default.png"
-    ],
+    
     [
         "Search Engine",
         "../Image/Sites/google.png"
@@ -91,16 +85,13 @@
     ],
     [
         "Space",
-        "../Image/Category/default.png"
+        "../Image/Category/space.png"
     ],
    
-    [
-        "Study",
-        "../Image/Sites/cbse.png"
-    ],
+    
     [
         "Travel",
-        "../Image/Category/default.png"
+        "../Image/Category/travel.png"
     ]
 ] 
 
@@ -119,4 +110,20 @@ export {CategoriesNameImage}
         "Streaming",
         "../Image/Category/default.png"
     ],
+
+    [
+        "Community",
+        "../Image/Sites/discord.png"
+    ],
+
+[
+        "Reviews",
+        "../Image/Category/reviews.png"
+    ],
+[
+        "Study",
+        "../Image/Sites/cbse.png"
+    ],
+
+
 */

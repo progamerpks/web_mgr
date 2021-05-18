@@ -46,6 +46,7 @@ class Agriculture extends React.Component
             {
                 dabba[index]= <BoxFunc 
                                 text={data[addedBoxes][1]} 
+                                domain={data[addedBoxes][2]} 
                                 img={data[addedBoxes][3]}
                                 size="0.9"/>            
             }else{

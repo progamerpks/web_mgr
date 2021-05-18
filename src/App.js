@@ -6,12 +6,13 @@ import React from 'react'
 //import withReactContent from 'sweetalert2-react-content'
 
 import AddTiteBtn from './AddTiteBtn'
-import AddContentBoxes from './AddContentBoxes'
+//import AddContentBoxes from './AddContentBoxes'
 import TopBar from './TopBar'
 import AddCntntBxFunc from './AddCntntBxFunc'
 import './App.css'
 import './GridWidth.css'
 import HomeTopSites from './Content/HomeTopSites'
+
 
 import {setCookie,getCookie} from './Content/CookiesFunc'
 
@@ -54,7 +55,7 @@ class App extends React.Component
           <button onClick={() => this.goHome()}>Home</button> 
           <button onClick={() => this.goTopSites()}>Top Sites</button>
           <button onClick={() => this.goAllCategories()}>All Categories</button> 
-          <button onClick={() => this.goSpecificCategory()}>Specific Category</button>
+          {/*<button onClick={() => this.goSpecificCategory()}>Specific Category</button>*/}
 
         </div>
 
@@ -140,13 +141,73 @@ class App extends React.Component
             <AddCntntBxFunc show="Shopping"/>
           :null}
 
+          {ShowOnScreen==="Blog"?
+            <AddCntntBxFunc show="Blog"/>
+          :null}
+
+          
+          
+          {ShowOnScreen==="Cloud"?
+            <AddCntntBxFunc show="Cloud"/>
+          :null}
+
+          {ShowOnScreen==="Social Media"?
+            <AddCntntBxFunc show="Social Media"/>
+          :null}
+
+          {ShowOnScreen==="Emails"?
+            <AddCntntBxFunc show="Emails"/>
+          :null}
+
+          {ShowOnScreen==="Space"?
+            <AddCntntBxFunc show="Space"/>
+          :null}
+
+          {ShowOnScreen==="Government"?
+            <AddCntntBxFunc show="Government"/>
+          :null}
+
+          {ShowOnScreen==="Developer"?
+            <AddCntntBxFunc show="Developer"/>
+          :null}
+
+          {ShowOnScreen==="Maps"?
+            <AddCntntBxFunc show="Maps"/>
+          :null}
+
+
+          {ShowOnScreen==="Search Engine"?
+            <AddCntntBxFunc show="Search Engine"/>
+          :null}
+
+          {ShowOnScreen==="Travel"?
+            <AddCntntBxFunc show="Travel"/>
+          :null}
+
+
+          {ShowOnScreen==="Bank"?
+            <AddCntntBxFunc show="Bank"/>
+          :null}
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
     );
   } //Render End
 
 
   refresh = () => {   
-    this.setState({changeState: true });    
+    this.setState({changeState: true });  
+    
     //console.log(getCookie("ShowOnScreen"));
   }
 

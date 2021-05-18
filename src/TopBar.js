@@ -2,7 +2,7 @@ import React from 'react'
 import './TopBar.css'
 import logoName from './LogoName.svg'
 import searchIcon from './search-solid.svg'
-import {CategoriesNameImage} from './Data/Categories'
+//import {CategoriesNameImage} from './Data/Categories'
 
 
 class TopBar extends React.Component 

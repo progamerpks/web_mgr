@@ -2,13 +2,13 @@
 import React from 'react'
 import BoxFunc from './BoxFunc';
 import BlankBoxFunc from './BlankBoxFunc';
-import {data} from '../Data/Anime'
+import {data} from '../Data/Email'
 
 
 var remainingBoxes;
 let addedBoxes;
 
-class Anime extends React.Component
+class Email extends React.Component
 {
     constructor()
     {
@@ -46,9 +46,8 @@ class Anime extends React.Component
             if(remainingBoxes>=0)
             {
                 dabba[index]= <BoxFunc 
-                                text={data[addedBoxes][1]} 
-                                domain={data[addedBoxes][2]} 
-                                img={data[addedBoxes][3]}
+                                text={data[addedBoxes][0]} 
+                                img={data[addedBoxes][2]}
                                 size="0.9"/>            
             }else{
                 dabba[index]= <BlankBoxFunc size="0.9"/>
@@ -75,4 +74,4 @@ class Anime extends React.Component
     }   
 }
 
-export default Anime
+export default Email
